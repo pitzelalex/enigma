@@ -27,7 +27,9 @@ describe Offset do
 
   describe '#square_date' do
     it 'squares the date to be used for the offsets' do
-      expect(Offset.square_date).to eq(2808258049)
+      offset = Offset.new(date: Date.parse('May 29, 1993'))
+
+      expect(offset.square_date).to eq(2808258049)
     end
   end
 
