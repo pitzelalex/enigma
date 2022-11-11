@@ -29,5 +29,29 @@ describe Key do
         expect(key3.a_key).to eq('00')
       end
     end
+
+    describe '#b_key' do
+      it 'returns the second 2 characters of the base' do
+        expect(key1.b_key).to eq('23')
+        expect(key2.b_key).to eq('43')
+        expect(key3.b_key).to eq('02')
+      end
+    end
+
+    describe '#c_key' do
+      it 'returns the 3rd 2 characters of the base' do
+        expect(key1.c_key).to eq('34')
+        expect(key2.c_key).to eq('32')
+        expect(key3.c_key).to eq('23')
+      end
+    end
+
+    describe '#d_key' do
+      it 'returns the 4th 2 characters of the base' do
+        expect(key1.d_key).to eq('45')
+        expect(key2.d_key).to eq('21')
+        expect(key3.d_key).to eq('30')
+      end
+    end
   end
 end
