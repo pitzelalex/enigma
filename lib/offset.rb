@@ -14,6 +14,11 @@ class Offset
     d = @date.strftime('%d')
     m = @date.strftime('%m')
     y = @date.strftime('%y')
-    @_converted_date ||= m + d + y
+    m + d + y
+  end
+
+  def square_date
+    converted = convert_date.to_i
+    @_squared ||= converted ** 2
   end
 end
