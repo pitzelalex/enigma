@@ -18,13 +18,15 @@ describe Key do
   end
 
   describe 'key methods' do
-    let(:key1) { Key.new(base: 12345) }
-    let(:key2) { Key.new(base: 54321) }
+    let(:key1) { Key.new(base: '12345') }
+    let(:key2) { Key.new(base: '54321') }
+    let(:key3) { Key.new(base: '00230') }
 
     describe '#a_key' do
       it 'returns the first 2 characters of the base' do
-        expect(key1.a_key).to eq(12)
-        expect(key2.a_key).to eq(54)
+        expect(key1.a_key).to eq('12')
+        expect(key2.a_key).to eq('54')
+        expect(key3.a_key).to eq('00')
       end
     end
   end
