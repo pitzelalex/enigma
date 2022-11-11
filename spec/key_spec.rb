@@ -9,8 +9,8 @@ describe Key do
       key = Key.new
 
       expect(key).to be_a Key
-      expect(key.length).to be 5
-      expect(key).to be_a Integer
+      expect(key.base.length).to be 5
+      expect(key.base).to be_a String
     end
   end
 end
