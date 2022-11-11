@@ -5,6 +5,10 @@ class Key
   attr_reader :base
 
   def initialize(base: rand.to_s[2..6])
-    @base = base.to_s
+    @base = base
+  end
+
+  def a_key
+    @base[0..1]
   end
 end
