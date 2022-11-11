@@ -40,33 +40,33 @@ describe Offset do
 
     describe '#a_offset' do
       it 'returns the first 2 characters of the base' do
-        expect(offset1.a_offset).to eq('8')
-        expect(offset2.a_offset).to eq('0')
-        expect(offset3.a_offset).to eq('3')
+        expect(offset1.a_offset).to eq(8)
+        expect(offset2.a_offset).to eq(0)
+        expect(offset3.a_offset).to eq(3)
       end
     end
 
     describe '#b_offset' do
       it 'returns the second 2 characters of the base' do
-        expect(offset1.b_offset).to eq('0')
-        expect(offset2.b_offset).to eq('0')
-        expect(offset3.b_offset).to eq('2')
+        expect(offset1.b_offset).to eq(0)
+        expect(offset2.b_offset).to eq(0)
+        expect(offset3.b_offset).to eq(2)
       end
     end
 
     describe '#c_offset' do
       it 'returns the 3rd 2 characters of the base' do
-        expect(offset1.c_offset).to eq('4')
-        expect(offset2.c_offset).to eq('0')
-        expect(offset3.c_offset).to eq('2')
+        expect(offset1.c_offset).to eq(4)
+        expect(offset2.c_offset).to eq(0)
+        expect(offset3.c_offset).to eq(2)
       end
     end
 
     describe '#d_offset' do
       it 'returns the 4th 2 characters of the base' do
-        expect(offset1.d_offset).to eq('9')
-        expect(offset2.d_offset).to eq('0')
-        expect(offset3.d_offset).to eq('5')
+        expect(offset1.d_offset).to eq(9)
+        expect(offset2.d_offset).to eq(0)
+        expect(offset3.d_offset).to eq(5)
       end
     end
   end
