@@ -21,4 +21,20 @@ class Offset
     converted = convert_date.to_i
     @_squared ||= converted ** 2
   end
+
+  def a_offset
+    square_date.digits[3]
+  end
+
+  def b_offset
+    square_date.digits[2]
+  end
+
+  def c_offset
+    square_date.digits[1]
+  end
+
+  def d_offset
+    square_date.digits[0]
+  end
 end
