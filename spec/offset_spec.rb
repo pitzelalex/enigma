@@ -16,4 +16,12 @@ describe Offset do
       expect(offset2.date).to eq(Date.parse('May 29, 1993'))
     end
   end
+
+  describe '#convert_date' do
+    it 'returns the date formatted as an integer DDMMYY' do
+      offset = Offset.new(date: Date.parse('May 29, 1993'))
+
+      expect(offset.convert_date).to eq('052993')
+    end
+  end
 end
