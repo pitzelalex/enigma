@@ -33,41 +33,41 @@ describe Offset do
     end
   end
 
-  # describe 'offset methods' do
-  #   let(:offset1) { Offset.new(date: '12345') }
-  #   let(:offset2) { Offset.new(date: '54321') }
-  #   let(:offset3) { Offset.new(date: '00230') }
+  describe 'offset methods' do
+    let(:offset1) { Offset.new(date: Date.parse('May 29, 1993')) }
+    let(:offset2) { Offset.new(date: Date.parse('June 5, 2000')) }
+    let(:offset3) { Offset.new(date: Date.parse('January 1, 2015')) }
 
-  #   describe '#a_offset' do
-  #     it 'returns the first 2 characters of the base' do
-  #       expect(offset1.a_offset).to eq('12')
-  #       expect(offset2.a_offset).to eq('54')
-  #       expect(offset3.a_offset).to eq('00')
-  #     end
-  #   end
+    describe '#a_offset' do
+      it 'returns the first 2 characters of the base' do
+        expect(offset1.a_offset).to eq('8')
+        expect(offset2.a_offset).to eq('0')
+        expect(offset3.a_offset).to eq('3')
+      end
+    end
 
-  #   describe '#b_offset' do
-  #     it 'returns the second 2 characters of the base' do
-  #       expect(offset1.b_offset).to eq('23')
-  #       expect(offset2.b_offset).to eq('43')
-  #       expect(offset3.b_offset).to eq('02')
-  #     end
-  #   end
+    describe '#b_offset' do
+      it 'returns the second 2 characters of the base' do
+        expect(offset1.b_offset).to eq('0')
+        expect(offset2.b_offset).to eq('0')
+        expect(offset3.b_offset).to eq('2')
+      end
+    end
 
-  #   describe '#c_offset' do
-  #     it 'returns the 3rd 2 characters of the base' do
-  #       expect(offset1.c_offset).to eq('34')
-  #       expect(offset2.c_offset).to eq('32')
-  #       expect(offset3.c_offset).to eq('23')
-  #     end
-  #   end
+    describe '#c_offset' do
+      it 'returns the 3rd 2 characters of the base' do
+        expect(offset1.c_offset).to eq('4')
+        expect(offset2.c_offset).to eq('0')
+        expect(offset3.c_offset).to eq('2')
+      end
+    end
 
-  #   describe '#d_offset' do
-  #     it 'returns the 4th 2 characters of the base' do
-  #       expect(offset1.d_offset).to eq('45')
-  #       expect(offset2.d_offset).to eq('21')
-  #       expect(offset3.d_offset).to eq('30')
-  #     end
-  #   end
-  # end
+    describe '#d_offset' do
+      it 'returns the 4th 2 characters of the base' do
+        expect(offset1.d_offset).to eq('9')
+        expect(offset2.d_offset).to eq('0')
+        expect(offset3.d_offset).to eq('5')
+      end
+    end
+  end
 end
