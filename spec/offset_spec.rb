@@ -2,6 +2,7 @@
 
 require 'rspec'
 require './lib/offset'
+require 'date'
 
 describe Offset do
   describe '#initialize' do
@@ -11,6 +12,7 @@ describe Offset do
 
       expect(offset1).to be_a Offset
       expect(offset1.date).to be_a Date
+      expect(offset1.date).to eq(Date.today)
       # expect(key2).to be_a Offset
       # expect(key2.base).to eq('12345')
     end
