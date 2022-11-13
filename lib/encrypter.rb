@@ -9,7 +9,7 @@ class Encrypter
               :offset,
               :input
 
-  def initialize(key: Key.new, offset: Offset.new, input:)
+  def initialize(input:, key: Key.new, offset: Offset.new)
     @key = key
     @offset = offset
     @input = input
