@@ -12,7 +12,7 @@ class Encrypter
   def initialize(input:, key: Key.new, offset: Offset.new)
     @key = key
     @offset = offset
-    @input = input
+    @input = input.downcase
   end
 
   def encrypt
