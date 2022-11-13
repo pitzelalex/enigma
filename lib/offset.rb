@@ -11,6 +11,8 @@ class Offset
   end
 
   def convert_date
+    return @date if @date.is_a? String
+
     d = @date.strftime('%d')
     m = @date.strftime('%m')
     y = @date.strftime('%y')
@@ -18,8 +20,7 @@ class Offset
   end
 
   def square_date
-    converted = convert_date.to_i
-    @_squared ||= converted ** 2
+    @square_date ||= convert_date.to_i ** 2
   end
 
   def a_offset
