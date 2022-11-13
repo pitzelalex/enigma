@@ -19,9 +19,9 @@ describe Encrypter do
     it 'changes the characters of a string based on the key and offset' do
       key = Key.new(base: 12345)
       offset = Offset.new(date: Date.parse('May 29, 1993'))
-      crypt = Encrypter.new(key: key, offset: offset, input: 'hellow world')
+      crypt = Encrypter.new(key: key, offset: offset, input: 'hello, world!')
 
-      expect(crypt.encrypt).to eq('aawlhwgokho')
+      expect(crypt.encrypt).to eq('aawlh,wgokho!')
     end
   end
 end
