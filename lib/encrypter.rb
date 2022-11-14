@@ -22,6 +22,7 @@ class Encrypter
     alphabet = ('a'..'z').to_a << ' '
     input_arr = @input.split('')
     crypt_arr = [a_cypher, b_cypher, c_cypher, d_cypher]
+
     encrypted = input_arr.map do |character|
       if alphabet.include?(character)
         alphabet.rotate! until alphabet[0] == character
