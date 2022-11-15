@@ -2,9 +2,12 @@
 
 require_relative 'key'
 require_relative 'offset'
+require_relative 'cypherable'
 
 # this is the Decrypter class
 class Decrypter
+  include Cypherable
+
   attr_reader :key,
               :offset,
               :input
@@ -18,11 +21,8 @@ class Decrypter
   def decrypt
     alphabet = ('a'..'z').to_a << ' '
     input_arr = @input.split('')
-    a_encryption = @key.a_key.to_i + @offset.a_offset.to_i
-    b_encryption = @key.b_key.to_i + @offset.b_offset.to_i
-    c_encryption = @key.c_key.to_i + @offset.c_offset.to_i
-    d_encryption = @key.d_key.to_i + @offset.d_offset.to_i
-    crypt_arr = [a_encryption, b_encryption, c_encryption, d_encryption]
+    crypt_arr = [a_cypher, b_cypher, c_cypher, d_cypher]
+
     decrypted = input_arr.map do |character|
       if alphabet.include?(character)
         alphabet.rotate! until alphabet[0] == character
